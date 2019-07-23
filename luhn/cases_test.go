@@ -94,4 +94,9 @@ var testCases = []struct {
 		":9",
 		false,
 	},
+	{
+		"non-English digits are invalid",
+		"٤٨",
+		false,
+	},
 }

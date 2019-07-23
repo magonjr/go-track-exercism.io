@@ -12,11 +12,12 @@ func Valid(s string) bool {
 	digits := 0
 
 	for i := len(code) - 1; i >= 0; i-- {
-		if !unicode.IsDigit(code[i]) {
-			if code[i] != ' ' {
-				return false
-			}
+		if unicode.IsSpace(code[i]) {
 			continue
+		}
+
+		if code[i] < '0' || code[i] > '9' {
+			return false
 		}
 
 		digits++

@@ -1,7 +1,5 @@
 package secret
 
-import "fmt"
-
 //Handshake
 func Handshake(v uint) []string {
 
@@ -24,8 +22,6 @@ func Handshake(v uint) []string {
 			hs[i], hs[len(hs)-1-i] = hs[len(hs)-1-i], hs[i]
 		}
 	}
-
-	fmt.Println(v, hs)
 
 	return hs
 }
